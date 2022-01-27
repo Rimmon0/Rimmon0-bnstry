@@ -1,0 +1,51 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+
+{% block content %}
+       
+
+   
+
+
+<div class="jum">
+    <h1>Мастер тени</h1>
+    <p class="lead">Специализации персонажа Мастер тени из ммо рпг Blade and soul.</p>
+
+</div>
+
+<div class=" boxs-spek">
+    <a href="{% url 'first_spek' %}" class="box-spek-img">
+        <div class="box-spek">
+         
+        <div class="box-spek-top"><h2>Ядовитая тень</h2></div>
+         <img src="{% static 'app/content/1sp.png' %}" class="home-img1" alt="logo" height="625" width="350"/>  
+         <div class="box-spek-bottom"><p>
+            Знаток ядов, отравляющий своих врагов. Смертельный яд проникает в тело противника, заставляя его молить о пощаде.</p>
+         </div>
+        </div>
+     </a>
+
+    <a href="{% url 'second_spek' %}" class="box-spek-img">
+        <div class="box-spek">
+         <div class="box-spek-top"><h2>Призрачная тень</h2></div>
+        
+       <img src="{% static 'app/content/2sp.png' %}" class="home-img1" alt="logo" height="625" width="350"/>
+           
+        <div class="box-spek-bottom">
+        <p>Искусный убийца, способный двигаться совершенно незаметно. Враг даже не поймёт, кто нанёс ему смертельный удар. Считается самым сложным персанажем в игре из-за своей сноровки.</p>
+        </div>
+        </div>
+    </a>
+
+    <a href="{% url 'third_spek' %}" class="box-spek-img">
+    <div class="box-spek">
+        <div class="box-spek-top"><h2>Сумрачная тень</h2></div>      
+         <img src="{% static 'app/content/3sp.png' %}" class="home-img1" alt="logo" height="625" width="350"/> 
+        <div class="box-spek-bottom">
+          <p>Убийца, овладевший силой теней. Один лишь его устрашающий облик обратит врагов в бегство.</p>
+        </div>
+    </div>
+    </a>
+</div>
+
+{% endblock %}

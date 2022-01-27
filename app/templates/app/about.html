@@ -1,0 +1,74 @@
+{% extends "app/layout.html" %}
+{% load staticfiles %}
+{% block content %}
+
+<div class="jum jum-about">
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+    </div>
+
+  <div class="person-stat">
+      
+      <div><img src="{% static 'app/content/1sp.png' %}" class="person-stat-right" alt="logo" height="418" width="745"></div>
+      <div class="person-stat-left jum">
+          <div class="person-stat-left-inner-1">
+            <p class="person-text-left">Сила атаки</p>
+            <p class="person-text-left">PvP атака</p>
+            <p class="person-text-left">Атака (боссы)</p>
+            <p class="person-text-left">Пробивание</p>
+            <p class="person-text-left">Точность</p>
+            <p class="person-text-left">Концентрация</p>
+            <p class="person-text-left">Крит. атака</p>
+            <p class="person-text-left">Крит. урон</p>
+            <p class="person-text-left">Сноровка</p>
+            <p class="person-text-left">Доп. урон</p>
+            <p class="person-text-left">Агрессия</p>
+            <p class="person-text-left">Урон от эф.</p>
+            <p class="person-text-left">Спец атака</p>
+            <p class="person-text-left">HP</p>
+            <p class="person-text-left">Защита</p>
+            <p class="person-text-left">PvP защита</p>
+            <p class="person-text-left">Защ (боссы)</p>
+            <p class="person-text-left">Уклонение</p>
+            <p class="person-text-left">Блок</p>
+            <p class="person-text-left">Защ. от крита</p>
+            <p class="person-text-left">Сила воли</p>
+            <p class="person-text-left">Сниж. урона</p>
+            <p class="person-text-left">Регенерация</p>
+            <p class="person-text-left">Восстановление</p>
+            <p class="person-text-left">Защ. от эф.</p>
+
+          </div>
+
+          <div class="person-stat-left-inner-2">
+            <p class="person-text-right">805</p>
+            <p class="person-text-right">815</p>
+            <p class="person-text-right">867</p>
+            <p class="person-text-right">456</p>
+            <p class="person-text-right">925</p>
+            <p class="person-text-right">0</p>
+            <p class="person-text-right">2998</p>
+            <p class="person-text-right">3005</p>
+            <p class="person-text-right">0 ур.</p>
+            <p class="person-text-right">22</p>
+            <p class="person-text-right">100%</p>
+            <p class="person-text-right">160</p>
+            <p class="person-text-right">3420</p>
+            <p class="person-text-right">268,314</p>
+            <p class="person-text-right">10,796</p>
+            <p class="person-text-right">10,894</p>
+            <p class="person-text-right">11,057</p>
+            <p class="person-text-right">4335</p>
+            <p class="person-text-right">3687</p>
+            <p class="person-text-right">815</p>
+            <p class="person-text-right">0 ур.</p>
+            <p class="person-text-right">0</p>
+            <p class="person-text-right">283</p>
+            <p class="person-text-right">100.13%</p>
+            <p class="person-text-right">160</p>
+          </div>
+      </div>
+  </div>
+
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+<div class="jum">
+<h2>{{ title }}</h2> 
+
+{% for post in posts %}
+
+    </div>
+<div class="jum contact-box">
+<h2> {{post.title}} </h2>
+<p> {{post.posted}} </p>
+<hr/>
+<p><a href="{% url 'blogpost' parametr=post.id %}">{{ post.description }}</a> </p>
+{% endfor %}
+</div>
+{% endblock %}

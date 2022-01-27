@@ -1,0 +1,39 @@
+
+    {% extends "app/layout.html" %}
+
+    {% load staticfiles %} 
+
+    {% block content %}
+<div class="jum jum-about">
+<h2>{{ title }}</h2>
+<h3>{{ message }}</h3>
+    </div>
+
+  <div class="list-group"> 
+
+        <a href="https://www.bladeandsoul.com/en-gb" class="list-group-item box-spek-bottom box-spek-bottom-about">
+            <img src="{% static 'app/content/logo_download.png' %}" alt="logo" height="60" width="60"/>  
+            <p class="about-text">Скачать игру можно здесь Blade and Soul</p>
+        </a> 
+
+        <a href="https://ru.4game.com" class="list-group-item box-spek-bottom box-spek-bottom-about">
+            <img src="{% static 'app/content/logo_4game.png' %}" alt="logo" height="60" width="60"/>
+           <p class="about-text"> Игровая платформа</p>
+        </a>
+
+        <a href="https://discord.com/invite/bnsrecruitment" class="list-group-item box-spek-bottom box-spek-bottom-about">
+            <img src="{% static 'app/content/logo_discord.png' %}" alt="logo" height="60" width="60"/>
+            <p class="about-text">Общение с игроками и технической поддержкой на одной волне</p>
+        </a>
+      
+         
+        <a href="https://www.unrealengine.com/en-US/" class="list-group-item box-spek-bottom box-spek-bottom-about">
+            <img src="{% static 'app/content/logo_unreal.png' %}" alt="logo" height="60" width="60"/>
+           <p class="about-text"> В 2021 году игра перешла на новый движок</p>
+        </a> 
+        
+  </div>
+<div class="jum jum-bottom"><p>Эту информацию будем использовать с умом.</p></div>
+
+    {% endblock %}
+
