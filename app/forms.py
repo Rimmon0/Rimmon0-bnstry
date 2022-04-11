@@ -34,3 +34,4 @@ class BlogForm (forms.ModelForm):
                "Краткое содержание", 'image': 
                "Путь к картинке", 'content': 
                "Полное содержание"} # метка к полю формы text
+ 

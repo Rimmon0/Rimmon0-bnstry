@@ -1,16 +1,39 @@
 {% extends "app/layout.html" %}
 
+
 {% block content %}
-
-<h2>{{ title }}.</h2>
-<h3>{{ message }}</h3>
-
  <h3>Добавить статью</h3>
-   <form method="POST" enctype="multipart/form-data" >{% csrf_token %} {# защита от атак CSRF#}
-   <div>
-     {{form.as_p}}
-     <button type="submit" class="save btn btn-default" > Отправить статью</button>
-   </div>
-   </form>
-
+ <form method="POST" enctype ="multipart/form-data" >{% csrf_token %} {# защита от атак CSRF#}
+ <div class="form-comment">
+ {{form.as_p}}
+ <button type="submit" class="save btn btn-default" > Сохранить </button>
+ </div>
+ </form>
 {% endblock %}
+
+
+def newpost(request):
+ if not request.user.is_superuser:
+     return HttpResponseNotAllowed ("")
+ if request.method == "POST": 
+     form = BlogForm(request.POST, request.FILES)
+     if form.is_valid():
+         blog_f = form.save(commit=False)
+         blog_f.posted = datetime.now()
+         blog_f.save()
+
+         return redirect('blogpost', parametr=blog_f.id)
+     else:
+         print (form.errors)
+ else:
+     form = BlogForm()
+     return render(request,
+         'app/newpost.html',
+         {
+         'form': form, 
+         })
+
+def links (request):
+    return render(request,
+         'app/links.html')
+

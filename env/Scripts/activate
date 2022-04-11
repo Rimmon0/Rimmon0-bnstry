@@ -37,7 +37,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="D:\Университет 1022-03 Отчёты\4 курс 1 семестр\Веб программирование (Бруттан Ю.В.)\Лабораторные работы\DjangoWebLab1\env"
+VIRTUAL_ENV="E:\прочее\сайт по вебу\DjangoWebLab1\env"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

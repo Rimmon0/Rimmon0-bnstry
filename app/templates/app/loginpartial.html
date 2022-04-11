@@ -2,15 +2,18 @@
 <form id="logoutForm" action="/logout/" method="post" class="navbar-right">
     {% csrf_token %}
     <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-brand">Добро пожаловать! {{ user.username }}!</span></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Логин</a></li>
+        <li><span class="navbar-brand">{{ user.username }}!</span></li>
+        {% if user.is_superuser %}
+        <li><a href="/newpost">Опубликовать</a></li>
+        {% endif %} 
+        <li><a href="javascript:document.getElementById('logoutForm').submit()">Выход</a></li>
     </ul>
 </form>
 
 {% else %}
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="{% url 'login' %}">Логин</a></li>
+    <li><a href="{% url 'login' %}">Вход</a></li>
 </ul>
 
 {% endif %}

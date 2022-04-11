@@ -8,7 +8,7 @@ if defined _OLD_CODEPAGE (
     "%SystemRoot%\System32\chcp.com" 65001 > nul
 )
 
-set VIRTUAL_ENV=D:\Университет 1022-03 Отчёты\4 курс 1 семестр\Веб программирование (Бруттан Ю.В.)\Лабораторные работы\DjangoWebLab1\env
+set VIRTUAL_ENV=E:\прочее\сайт по вебу\DjangoWebLab1\env
 
 if not defined PROMPT set PROMPT=$P$G
 

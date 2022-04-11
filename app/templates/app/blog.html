@@ -1,4 +1,4 @@
-{% extends "app/layout.html" %}
+﻿{% extends "app/layout.html" %}
 
 {% block content %}
 <div class="jum">
@@ -14,4 +14,6 @@
 <p><a href="{% url 'blogpost' parametr=post.id %}">{{ post.description }}</a> </p>
 {% endfor %}
 </div>
+<a href="{% url 'newpost' %}" class="jum">Добавить пост</a>
+
 {% endblock %}

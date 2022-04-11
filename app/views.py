@@ -98,29 +98,25 @@ def third_spek(request):
         )
 
 def newpost(request):
-    """Renders the newpost page."""
-    assert isinstance(request, HttpRequest)
-    if request.method == "POST":
-        form = BlogForm(request.POST, request.FILES)
-        if form.is_valid():
-            blog_f = form.save(commit=False)
-            blog_f.author = request.user  
-            blog_f.is_superuser = True # является суперпользователем
-            blog_f.date = datetime.now() 
-            blog_f.save()
-            return redirect('blog')
-    else:
-     form = BlogForm() 
-     return render(
-  request,
-  'app/blogpost.html',
-  {
-     'post_1': post_1,                      # передача конкретной статьи в шаблон веб-страницы
-     'comments': comments,                  # передача всех комментариев к данной статье в шаблон веб-страницы
-     'form': form,                          # передача формы в шаблон веб-страницы
-     'year':datetime.now().year,
-  }
-)
+ if not request.user.is_superuser:
+     return HttpResponseNotAllowed ("")
+ if request.method == "POST": 
+     form = BlogForm(request.POST, request.FILES)
+     if form.is_valid():
+         blog_f = form.save(commit=False)
+         blog_f.posted = datetime.now()
+         blog_f.save()
+
+         return redirect('blogpost', parametr=blog_f.id)
+     else:
+         print (form.errors)
+ else:
+     form = BlogForm()
+     return render(request,
+         'app/newpost.html',
+         {
+         'form': form, 
+         })
 
 
 def blog(request):

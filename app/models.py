@@ -47,5 +47,3 @@ class Comment(models.Model):
       verbose_name = "Комментарий"
       verbose_name_plural = "Комментарии к статьям блога"
       ordering = ["-date"]
-
- 

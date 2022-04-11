@@ -27,7 +27,7 @@ function global:deactivate ([switch]$NonDestructive) {
 
 deactivate -nondestructive
 
-$env:VIRTUAL_ENV="D:\Университет 1022-03 Отчёты\4 курс 1 семестр\Веб программирование (Бруттан Ю.В.)\Лабораторные работы\DjangoWebLab1\env"
+$env:VIRTUAL_ENV="E:\прочее\сайт по вебу\DjangoWebLab1\env"
 
 if (! $env:VIRTUAL_ENV_DISABLE_PROMPT) {
     # Set the prompt to include the env name
